@@ -6,10 +6,14 @@ export class ContactsControllerOptions {
 }
 
 class ContactsController {
+
   contacts: ContactsCollection;
+  promesa: Promise<any>;
+
   constructor() {
     this.contacts = new ContactsCollection();
-    this.contacts.load();
+    const promesaLoad = this.contacts.load();
+    this.promesa = promesaLoad;
   }
   processOptions(options: ContactsControllerOptions) {
     var resultado;

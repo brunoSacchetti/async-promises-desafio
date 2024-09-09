@@ -7,3 +7,5 @@
 - Modificar los tests para que soporten los nuevos métodos asincrónicos
 
 - Todo el código está en /src
+
+ts-node source/index.ts --action save --params '{id:1, nombre:"Brunito"}'
